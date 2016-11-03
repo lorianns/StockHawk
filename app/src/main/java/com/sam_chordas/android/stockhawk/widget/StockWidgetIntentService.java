@@ -62,6 +62,7 @@ public class StockWidgetIntentService extends IntentService {
 
             // Add the data to the RemoteViews
             views.setImageViewResource(R.id.stock_symbol, android.R.drawable.ic_media_play);
+            views.setTextViewText(R.id.tv_text,"YHOO");
 
             // Create an Intent to launch MainActivity
             Intent launchIntent = new Intent(this, MyStocksActivity.class);
