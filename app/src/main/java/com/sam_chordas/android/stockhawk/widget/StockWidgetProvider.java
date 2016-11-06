@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 
+import com.sam_chordas.android.stockhawk.service.StockTaskService;
+
 /**
  * Created by lorianns on 10/23/16.
  */
@@ -26,8 +28,8 @@ public class StockWidgetProvider extends AppWidgetProvider {
     @Override
     public void onReceive(@NonNull Context context, @NonNull Intent intent) {
         super.onReceive(context, intent);
-//        if (SunshineSyncAdapter.ACTION_DATA_UPDATED.equals(intent.getAction())) {
+        if (StockTaskService.ACTION_DATA_UPDATED.equals(intent.getAction())) {
             context.startService(new Intent(context, StockWidgetIntentService.class));
-//        }
+        }
     }
 }

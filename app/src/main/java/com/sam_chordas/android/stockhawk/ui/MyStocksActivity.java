@@ -86,6 +86,7 @@ public class MyStocksActivity extends AppCompatActivity implements LoaderManager
               @Override public void onItemClick(View v, int position) {
                 //TODO:
                 // do something on item click
+                startActivity(new Intent(MyStocksActivity.this, MyStockDetailsActivity.class));
               }
             }));
     recyclerView.setAdapter(mCursorAdapter);
